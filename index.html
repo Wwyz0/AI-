@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>灵创提词器 2.0</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header>
+        <img src="logo.png" alt="Logo">
+        <h1>灵创提词器 2.0</h1>
+        <button>切换旧版</button>
+    </header>
+
+    <main>
+        <section id="ai-prompter">
+            <form id="prompt-form">
+                <label for="prompt-result">提示词生成结果：</label>
+                <textarea id="prompt-result" name="prompt-result" placeholder="/imagine prompt:"></textarea>
+                
+                <div class="button-group">
+                    <div class="left-buttons">
+                        <button type="reset" id="reset-button">重置</button>
+                        <button type="button" id="copy-button">复制</button>
+                    </div>
+                    <button type="button" id="open-custom-dictionary">自定义词库</button>
+                </div>
+            </form>
+        </section>
+
+        <!-- 原有的按钮组 -->
+        <div id="dynamic-buttons-container">
+            <div class="button-set">
+                <button class="button-set-item" id="all-words">所有词</button>
+                <button class="button-set-item" id="official-params">官方参数</button>
+                <button class="button-set-item" id="lighting">照明</button>
+                <button class="button-set-item" id="composition">视角/构图</button>
+                <button class="button-set-item" id="environment">环境</button>
+                <button class="button-set-item" id="style">风格</button>
+            </div>
+        </div>
+
+        <!-- 图文混排按钮容器 -->
+        <div id="image-button-grids-container">
+            <div class="image-button-grid" id="image-buttons-all-words" style="display: none;"></div>
+            <div class="image-button-grid" id="image-buttons-official-params" style="display: none;"></div>
+            <div class="image-button-grid" id="image-buttons-lighting" style="display: none;"></div>
+            <div class="image-button-grid" id="image-buttons-composition" style="display: none;"></div>
+            <div class="image-button-grid" id="image-buttons-environment" style="display: none;"></div>
+            <div class="image-button-grid" id="image-buttons-style" style="display: none;"></div>
+        </div>
+
+        <!-- 自定义词库弹出框 -->
+        <div id="customDictionaryModal" class="modal">
+            <div class="modal-content">
+                <span class="close-button">&times;</span>
+                <h2>上传个人词库</h2>
+                <div class="file-upload">
+                    <input type="text" placeholder="仅支持excel格式" readonly>
+                    <label for="excel-file-input" class="file-select-btn">选择文件</label>
+                    <input type="file" id="excel-file-input" accept=".xlsx, .xls" style="display:none;">
+                    <span class="help-icon">?</span>
+                </div>
+                <div class="upload-buttons">
+                    <button id="download-template">下载表格模板</button>
+                    <button id="upload-file">上传</button>
+                </div>
+            </div>
+        </div>
+       
+    </main>
+
+    <footer>
+        <p>© 2024 灵创提词器 2.0</p>
+    </footer>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/xlsx/0.16.9/xlsx.full.min.js"></script>
+    <script src="script.js"></script>
+</body>
+</html>
