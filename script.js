@@ -58,7 +58,7 @@ document.addEventListener('DOMContentLoaded', function() {
 
     // 为每个分类生成默认的图文混排按钮
      predefinedCategories
-         ['figure'] = [
+         ['figure'] ：[
     { cnText: '女性', enText: 'female', imgSrc: 'https://github.com/Wwyz0/AIGC-Prompt/blob/main/%E6%9C%AA%E6%A0%87%E9%A2%98-1_%E7%94%BB%E6%9D%BF%201.jpg' },
     { cnText: '双胞胎', enText: 'twins', imgSrc: 'https://github.com/Wwyz0/AIGC-Prompt/blob/main/%E6%9C%AA%E6%A0%87%E9%A2%98-1_%E7%94%BB%E6%9D%BF%201.jpg' },
     { cnText: '学生', enText: 'student', imgSrc: 'https://github.com/Wwyz0/AIGC-Prompt/blob/main/%E6%9C%AA%E6%A0%87%E9%A2%98-1_%E7%94%BB%E6%9D%BF%201.jpg' },
