@@ -58,35 +58,98 @@ document.addEventListener('DOMContentLoaded', function() {
 
     // 为每个分类生成默认的图文混排按钮
     const predefinedCategories = {
-        'all-words': [
-            { cnText: '词语1', enText: 'Word1' },
-            { cnText: '词语2', enText: 'Word2' },
-            { cnText: '词语3', enText: 'Word3' }
+        'figure': [
+            { cnText: '女性', enText: 'female' },
+            { cnText: '双包套', enText: 'twins' },
+            { cnText: '学生', enText: 'student' }
+            { cnText: '女王', enText: 'queen' }
+            { cnText: '萝莉', enText: 'loli' }
+            { cnText: '美少女', enText: 'bishoujo' }
+            { cnText: '[辣妹', enText: 'gyaru' }
+            { cnText: '大小姐', enText: 'ojousama' }
+            { cnText: '天使', enText: 'angel' }
+            { cnText: '魔鬼', enText: 'devil' }
+            { cnText: '怪物', enText: 'monster' }
+            { cnText: '老人', enText: 'elder' }
+            { cnText: '奴隶', enText: 'slave' }
+            { cnText: '雪女', enText: 'yukiwo' }
+            { cnText: '女神', enText: 'goddess' }
+            { cnText: '公主', enText: 'princess' }
+            { cnText: '王子', enText: 'prince' }
+            { cnText: '新娘', enText: 'bride' }
+            { cnText: '新郎', enText: 'bridegroom' }
+            { cnText: '兔女郎', enText: 'bunny girl' }
+            { cnText: '怪物女孩', enText: 'monster girl' }
+            { cnText: '婴儿', enText: 'baby' }
+            { cnText: '机器人', enText: 'roboot' }
+            { cnText: '', enText: '' }
+            { cnText: '', enText: '' }
+    
         ],
         'official-params': [
             { cnText: '参数1', enText: 'Param1' },
             { cnText: '参数2', enText: 'Param2' },
             { cnText: '参数3', enText: 'Param3' }
+            { cnText: '', enText: '' }
+            { cnText: '', enText: '' }
+            { cnText: '', enText: '' }
+            { cnText: '', enText: '' }
+            { cnText: '', enText: '' }
+            { cnText: '', enText: '' }
+            { cnText: '', enText: '' }
+            { cnText: '', enText: '' }
         ],
         'lighting': [
             { cnText: '照明1', enText: 'Lighting1' },
             { cnText: '照明2', enText: 'Lighting2' },
             { cnText: '照明3', enText: 'Lighting3' }
+            { cnText: '', enText: '' }
+            { cnText: '', enText: '' }
+            { cnText: '', enText: '' }
+            { cnText: '', enText: '' }
+            { cnText: '', enText: '' }
+            { cnText: '', enText: '' }
+            { cnText: '', enText: '' }
+            { cnText: '', enText: '' }
         ],
         'composition': [
             { cnText: '构图1', enText: 'Composition1' },
             { cnText: '构图2', enText: 'Composition2' },
             { cnText: '构图3', enText: 'Composition3' }
+            { cnText: '', enText: '' }
+            { cnText: '', enText: '' }
+            { cnText: '', enText: '' }
+            { cnText: '', enText: '' }
+            { cnText: '', enText: '' }
+            { cnText: '', enText: '' }
+            { cnText: '', enText: '' }
+            { cnText: '', enText: '' }
         ],
         'environment': [
             { cnText: '环境1', enText: 'Environment1' },
             { cnText: '环境2', enText: 'Environment2' },
             { cnText: '环境3', enText: 'Environment3' }
+            { cnText: '', enText: '' }
+            { cnText: '', enText: '' }
+            { cnText: '', enText: '' }
+            { cnText: '', enText: '' }
+            { cnText: '', enText: '' }
+            { cnText: '', enText: '' }
+            { cnText: '', enText: '' }
+            { cnText: '', enText: '' }
         ],
         'style': [
             { cnText: '风格1', enText: 'Style1' },
             { cnText: '风格2', enText: 'Style2' },
             { cnText: '风格3', enText: 'Style3' }
+            { cnText: '', enText: '' }
+            { cnText: '', enText: '' }
+            { cnText: '', enText: '' }
+            { cnText: '', enText: '' }
+            { cnText: '', enText: '' }
+            { cnText: '', enText: '' }
+            { cnText: '', enText: '' }
+            { cnText: '', enText: '' }
         ]
     };
 
