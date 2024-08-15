@@ -57,35 +57,42 @@ document.addEventListener('DOMContentLoaded', function() {
     }
 
     // 为每个分类生成默认的图文混排按钮
-    const predefinedCategories = {
-        'figure': [
-            { cnText: '女性', enText: 'female' },
-            { cnText: '双包套', enText: 'twins' },
-            { cnText: '学生', enText: 'student' }
-            { cnText: '女王', enText: 'queen' }
-            { cnText: '萝莉', enText: 'loli' }
-            { cnText: '美少女', enText: 'bishoujo' }
-            { cnText: '[辣妹', enText: 'gyaru' }
-            { cnText: '大小姐', enText: 'ojousama' }
-            { cnText: '天使', enText: 'angel' }
-            { cnText: '魔鬼', enText: 'devil' }
-            { cnText: '怪物', enText: 'monster' }
-            { cnText: '老人', enText: 'elder' }
-            { cnText: '奴隶', enText: 'slave' }
-            { cnText: '雪女', enText: 'yukiwo' }
-            { cnText: '女神', enText: 'goddess' }
-            { cnText: '公主', enText: 'princess' }
-            { cnText: '王子', enText: 'prince' }
-            { cnText: '新娘', enText: 'bride' }
-            { cnText: '新郎', enText: 'bridegroom' }
-            { cnText: '兔女郎', enText: 'bunny girl' }
-            { cnText: '怪物女孩', enText: 'monster girl' }
-            { cnText: '婴儿', enText: 'baby' }
-            { cnText: '机器人', enText: 'roboot' }
-            { cnText: '', enText: '' }
-            { cnText: '', enText: '' }
-    
-        ],
+    predefinedCategories['figure'] = [
+    { cnText: '女性', enText: 'female', imgSrc: 'https://github.com/Wwyz0/AIGC-Prompt/blob/main/%E6%9C%AA%E6%A0%87%E9%A2%98-1_%E7%94%BB%E6%9D%BF%201.jpg' },
+    { cnText: '双胞胎', enText: 'twins', imgSrc: 'https://github.com/Wwyz0/AIGC-Prompt/blob/main/%E6%9C%AA%E6%A0%87%E9%A2%98-1_%E7%94%BB%E6%9D%BF%201.jpg' },
+    { cnText: '学生', enText: 'student', imgSrc: 'https://github.com/Wwyz0/AIGC-Prompt/blob/main/%E6%9C%AA%E6%A0%87%E9%A2%98-1_%E7%94%BB%E6%9D%BF%201.jpg' },
+    { cnText: '女王', enText: 'queen', imgSrc: 'https://github.com/Wwyz0/AIGC-Prompt/blob/main/%E6%9C%AA%E6%A0%87%E9%A2%98-1_%E7%94%BB%E6%9D%BF%201.jpg' },
+    { cnText: '萝莉', enText: 'loli', imgSrc: 'https://github.com/Wwyz0/AIGC-Prompt/blob/main/%E6%9C%AA%E6%A0%87%E9%A2%98-1_%E7%94%BB%E6%9D%BF%201.jpg' },
+    { cnText: '美少女', enText: 'bishoujo', imgSrc: 'https://github.com/Wwyz0/AIGC-Prompt/blob/main/%E6%9C%AA%E6%A0%87%E9%A2%98-1_%E7%94%BB%E6%9D%BF%201.jpg' },
+    { cnText: '辣妹', enText: 'gyaru', imgSrc: 'https://github.com/Wwyz0/AIGC-Prompt/blob/main/%E6%9C%AA%E6%A0%87%E9%A2%98-1_%E7%94%BB%E6%9D%BF%201.jpg' },
+    { cnText: '女神', enText: 'goddess', imgSrc: 'https://github.com/Wwyz0/AIGC-Prompt/blob/main/%E6%9C%AA%E6%A0%87%E9%A2%98-1_%E7%94%BB%E6%9D%BF%201.jpg' },
+    { cnText: '公主', enText: 'princess', imgSrc: 'images/princess.jpg' },
+    { cnText: '天使', enText: 'angel', imgSrc: 'https://github.com/Wwyz0/AIGC-Prompt/blob/main/%E6%9C%AA%E6%A0%87%E9%A2%98-1_%E7%94%BB%E6%9D%BF%201.jpg' },
+    { cnText: '人偶', enText: 'doll', imgSrc: 'https://github.com/Wwyz0/AIGC-Prompt/blob/main/%E6%9C%AA%E6%A0%87%E9%A2%98-1_%E7%94%BB%E6%9D%BF%201.jpg' },
+    { cnText: '小精灵', enText: 'fairy', imgSrc: https://github.com/Wwyz0/AIGC-Prompt/blob/main/%E6%9C%AA%E6%A0%87%E9%A2%98-1_%E7%94%BB%E6%9D%BF%201.jpg' },
+    { cnText: '恶魔', enText: 'devil', imgSrc: 'https://github.com/Wwyz0/AIGC-Prompt/blob/main/%E6%9C%AA%E6%A0%87%E9%A2%98-1_%E7%94%BB%E6%9D%BF%201.jpg' },
+    { cnText: '吸血鬼', enText: 'vampire', imgSrc: 'https://github.com/Wwyz0/AIGC-Prompt/blob/main/%E6%9C%AA%E6%A0%87%E9%A2%98-1_%E7%94%BB%E6%9D%BF%201.jpg' },
+    { cnText: '精灵', enText: 'elf', imgSrc: 'https://github.com/Wwyz0/AIGC-Prompt/blob/main/%E6%9C%AA%E6%A0%87%E9%A2%98-1_%E7%94%BB%E6%9D%BF%201.jpg' },
+    { cnText: '美人鱼', enText: 'mermaid', imgSrc: 'https://github.com/Wwyz0/AIGC-Prompt/blob/main/%E6%9C%AA%E6%A0%87%E9%A2%98-1_%E7%94%BB%E6%9D%BF%201.jpg' },
+    { cnText: '海盗', enText: 'pirate', imgSrc: 'https://github.com/Wwyz0/AIGC-Prompt/blob/main/%E6%9C%AA%E6%A0%87%E9%A2%98-1_%E7%94%BB%E6%9D%BF%201.jpg' },
+    { cnText: '狼人', enText: 'werewolf', imgSrc: 'https://github.com/Wwyz0/AIGC-Prompt/blob/main/%E6%9C%AA%E6%A0%87%E9%A2%98-1_%E7%94%BB%E6%9D%BF%201.jpg' },
+    { cnText: '女巫', enText: 'witch', imgSrc: 'https://github.com/Wwyz0/AIGC-Prompt/blob/main/%E6%9C%AA%E6%A0%87%E9%A2%98-1_%E7%94%BB%E6%9D%BF%201.jpg' },
+    { cnText: '机器人', enText: 'robot', imgSrc: 'https://github.com/Wwyz0/AIGC-Prompt/blob/main/%E6%9C%AA%E6%A0%87%E9%A2%98-1_%E7%94%BB%E6%9D%BF%201.jpg' },
+    { cnText: '怪物', enText: 'monster', imgSrc: 'https://github.com/Wwyz0/AIGC-Prompt/blob/main/%E6%9C%AA%E6%A0%87%E9%A2%98-1_%E7%94%BB%E6%9D%BF%201.jpg' },
+    { cnText: '婴儿', enText: 'baby', imgSrc: 'https://github.com/Wwyz0/AIGC-Prompt/blob/main/%E6%9C%AA%E6%A0%87%E9%A2%98-1_%E7%94%BB%E6%9D%BF%201.jpg' },
+    { cnText: '忍者', enText: 'ninja', imgSrc: 'https://github.com/Wwyz0/AIGC-Prompt/blob/main/%E6%9C%AA%E6%A0%87%E9%A2%98-1_%E7%94%BB%E6%9D%BF%201.jpg' },
+    { cnText: '幽灵', enText: 'ghost', imgSrc: 'https://github.com/Wwyz0/AIGC-Prompt/blob/main/%E6%9C%AA%E6%A0%87%E9%A2%98-1_%E7%94%BB%E6%9D%BF%201.jpg' },
+    { cnText: '孩子', enText: 'kid', imgSrc: 'https://github.com/Wwyz0/AIGC-Prompt/blob/main/%E6%9C%AA%E6%A0%87%E9%A2%98-1_%E7%94%BB%E6%9D%BF%201.jpg' },
+    { cnText: '青少年', enText: 'teen', imgSrc: 'https://github.com/Wwyz0/AIGC-Prompt/blob/main/%E6%9C%AA%E6%A0%87%E9%A2%98-1_%E7%94%BB%E6%9D%BF%201.jpg' },
+    { cnText: '警察', enText: 'police', imgSrc: 'https://github.com/Wwyz0/AIGC-Prompt/blob/main/%E6%9C%AA%E6%A0%87%E9%A2%98-1_%E7%94%BB%E6%9D%BF%201.jpg' },
+    { cnText: '宇航员', enText: 'astronaut', imgSrc: 'https://github.com/Wwyz0/AIGC-Prompt/blob/main/%E6%9C%AA%E6%A0%87%E9%A2%98-1_%E7%94%BB%E6%9D%BF%201.jpg' },
+    { cnText: '修女', enText: 'nun', imgSrc: 'https://github.com/Wwyz0/AIGC-Prompt/blob/main/%E6%9C%AA%E6%A0%87%E9%A2%98-1_%E7%94%BB%E6%9D%BF%201.jpg' },
+    { cnText: '外星人', enText: 'alien', imgSrc: 'https://github.com/Wwyz0/AIGC-Prompt/blob/main/%E6%9C%AA%E6%A0%87%E9%A2%98-1_%E7%94%BB%E6%9D%BF%201.jpg' },
+    { cnText: '超级英雄', enText: 'superhero', imgSrc: 'https://github.com/Wwyz0/AIGC-Prompt/blob/main/%E6%9C%AA%E6%A0%87%E9%A2%98-1_%E7%94%BB%E6%9D%BF%201.jpg' },
+    { cnText: '龙女', enText: 'dragon_lady', imgSrc: 'https://github.com/Wwyz0/AIGC-Prompt/blob/main/%E6%9C%AA%E6%A0%87%E9%A2%98-1_%E7%94%BB%E6%9D%BF%201.jpg' },
+    { cnText: '僵尸', enText: 'zombie', imgSrc: 'https://github.com/Wwyz0/AIGC-Prompt/blob/main/%E6%9C%AA%E6%A0%87%E9%A2%98-1_%E7%94%BB%E6%9D%BF%201.jpg' },
+];
+
         'official-params': [
             { cnText: '参数1', enText: 'Param1' },
             { cnText: '参数2', enText: 'Param2' },
